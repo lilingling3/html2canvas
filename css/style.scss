@@ -1,0 +1,27 @@
+.flexbox-wrap{
+    width:550px;
+    display: flex;
+}
+.flexbox-item{
+    flex-grow:1;
+    &:nth-child(1){
+        width:60px;
+    }
+    &:nth-child(2){
+        width:70px;
+    }
+    &:nth-child(3){
+        width:80px;
+    }
+    &:nth-child(4){
+        width:90px;
+    }
+    &:nth-child(5){
+         width:100px;
+    }
+}
+@for $i from 1 through 5 {
+    .flexbox-item:nth-child(#{$i}){
+        background-color: rgba(35 * (6-$i), 20 * $i, 35 * $i,1);
+    }
+}
